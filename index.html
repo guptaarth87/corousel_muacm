@@ -1,31 +1,67 @@
-<html>
-  <head>
-    <link rel="stylesheet" href="styles.css" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-  </head>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <body>
-    <div class="container">
-    <div class="row ">
-    <div class="carousel col-lg-10">
-      <div class="carousel__item  carousel__item--visible">
-        <img class="ht" src="images/1.jpg" />
-      </div>
-      <div class="carousel__item">
-        <img class="ht" src="images/2.jpg" />
-      </div>
-      <div class="carousel__item ">
-        <img class="ht" src="images/3.jpg" />
-      </div>
+  <link rel="stylesheet" href="styles.css">
+  
 
-      <div class="carousel__actions">
-        <button id="carousel__button--prev" aria-label="Previous slide"><</button>
-        <button id="carousel__button--next" aria-label="Next slide">></button>
+  <title>Document</title>
+</head>
+<body>
+
+  
+
+  <div class="document-center">
+    <!--This carousel-container only exists so we can do the 
+    aspect ratio tricks in CSS-->
+    <div class="carousel-container">
+      <div class="carousel" id="carousel-1" auto-scroll="7000">
+        <!--The uppermost screen will appear first. This is due to JavaScript-->
+        <section class="carousel-screen">
+          <img src="images/img1.jpg" alt="event-img" />
+          <section class="text-container">
+            <p>Heading text 1 </p>
+            <p>Lorem ipsum dolor sit amet </p>
+          </section>
+        </section>
+        <section class="carousel-screen">
+          <img src="images/img2.jpg" alt="event-img" />
+          <section class="text-container">
+            <p>Heading text 2</p>
+            <p>Lorem ipsum dolor sit amet </p>
+          </section>
+        </section>
+        <section class="carousel-screen">
+          <img src="images/img3.png" alt="event-img" />
+          <section class="text-container">
+            <p>Heading text 3</p>
+            <p>Lorem ipsum dolor sit amet</p>
+          </section>
+        </section>
+        <!--These are not screens. They will always be on carousel-->
+        <section class="circle-container">
+          <!--These 'circles' need to match the number of carousel screens-->
+          <div class="circle"></div>
+          <div class="circle"></div>
+          <div class="circle"></div>
+        </section>
+        <div class="left-arrow">
+          <span class="chevron left"></span>
+        </div>
+        <div class="right-arrow">
+          <span class="chevron right"></span>
+        </div>
       </div>
     </div>
   </div>
-</div>
-    <script src="app.js"></script>
-  </body>
+
+  <script src="app.js"></script>
+  <!--Script. Do not touch!-->
+
+  
+</body>
 </html>
+
